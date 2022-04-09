@@ -64,8 +64,8 @@
 Adafruit_NeoPixel strip(Led_Numbers, Light, NEO_GRB + NEO_KHZ800);
 
 //Wi-Fi information
-const char* ssid = "freeman";
-const char* password = "cogeco388";
+const char* ssid = "yourWIFI";
+const char* password = "yourPassword";
 
 int buttonInput = 2;
 int buttonState = 14;
