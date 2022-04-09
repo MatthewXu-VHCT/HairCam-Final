@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>Personal Haircut Camera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      body { 
+        width: 100%;
+        font-family: Roboto; 
+        background: #F5FAFF;
+        color:#000000;
+        text-align: center; 
+        margin: 0; 
+        /*padding-top: 30px;*/
+      }
+      
+      .Header{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+        height: 50px;
+        background: #ffffff;
+        border-radius:0 0 25px 25px;
+      }
+      
+      h2{
+        /*top:42%;*/
+        text-align: center;
+        padding: 0px 0;
+      }
+      
+      p{
+        text-align:center;
+        font-size: 0.8em;
+      }
+      
+      img {  
+        width: auto; 
+        max-width: 100% ; 
+        height: auto ; 
+        border:10px solid #ffffff; 
+        border-radius: 25px;
+      }
+      
+      ion-icon {
+        font-size: 24px;
+        padding: -10px 0;
+      }
+
+      .center{
+        width: 100%;
+        justify-content: center;
+        margin-top: 8%;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="Header"></div>
+
+ <!--<div class="center">  -->
+      <h2><ion-icon name="videocam-outline"></ion-icon>Haircut Camera</h2>
+      <img src="" id="photo" >
+      <br>
+      <p>
+        <ion-icon name="information-circle-outline" style="font-size: 16px; padding-top:20px"></ion-icon>
+        The camera should face the back head.
+      </p>
+ <!--</div>   -->
+
+
+    <!-- Abandoned interface elements for controlling the light -->
+  <!--  <div class="hueContainer">
+          Hue<br>
+      <input type="range" align="center" min="1" max="360" value="0" id="hue" onchange="updateH(this)">
+      <p id="outputH"></p>
+    </div>
+    <br>
+    <div class="satContainer">
+          Saturation<br>
+      <input type="range" align="center" min="1" max="100" value="100" id="sat" onchange="updateS(this)">
+      <p id="outputS"></p>
+    </div>
+    <br>
+    <div class="ligContainer">
+          Lightness<br>
+      <input type="range" align="center" min="1" max="100" value="50" id="lig" onchange="updateL(this)">
+      <p id="outputL"></p>
+    </div>   -->
+
+  <script>
+//  var sliderH = document.getElementById("hue").value;
+//  var sliderS = document.getElementById("sat").value;
+//  var sliderL = document.getElementById("lig").value;
+//  var outputH = sliderH.innerHTML;
+//  var outputS = sliderS.innerHTML;
+//  var outputL = SLIDERb.innerHTML;
+//  
+//  updateH =>{var xhr = new XMLHttpRequest(); xhr.open("GET", "/action?slider="+outputH, true); xhr.send()}
+//  updateS =>{var xhr = new XMLHttpRequest(); xhr.open("GET", "/action?slider="+outputS, true); xhr.send()}
+//  updateL =>{var xhr = new XMLHttpRequest(); xhr.open("GET", "/action?slider="+outputL, true); xhr.send()}
+
+  //streaming via the http link
+  window.onload = document.getElementById("photo").src = window.location.href.slice(0, -1) + ":81/stream";
+  </script>
+  </body>
+</html>
