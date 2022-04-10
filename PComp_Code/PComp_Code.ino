@@ -154,7 +154,7 @@ static const char PROGMEM INDEX_HTML[] = R"homePage(
   <body>
     <div class="Header"></div>
 
- <!--<div class="center">  -->
+ <div class="center">
       <h2><ion-icon name="videocam-outline"></ion-icon>Haircut Camera</h2>
       <img src="" id="photo" >
       <br>
@@ -162,7 +162,7 @@ static const char PROGMEM INDEX_HTML[] = R"homePage(
         <ion-icon name="information-circle-outline" style="font-size: 16px; padding-top:20px"></ion-icon>
         The camera should face the back head.
       </p>
- <!--</div>   -->
+ </div> 
 
 
     <!-- Abandoned interface elements for controlling the light -->
