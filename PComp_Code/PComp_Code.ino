@@ -134,6 +134,17 @@ static const char PROGMEM INDEX_HTML[] = R"homePage(
 
       .center{
         width: 100%;
+        height: 100%;
+        position: absolute; /*Can also be `fixed`*/
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
         justify-content: center;
         margin-top: 8%;
       }
