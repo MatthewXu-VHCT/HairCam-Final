@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <title>Personal Haircut Camera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            width: 100%;
+            font-family: Roboto;
+            background: linear-gradient(45deg, #343C60, #313646);
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            align-content: center;
+        }
+
+        .Header {
+            /*            width: 100%;*/
+            align-items: center;
+            margin: 2rem auto 2rem;
+            height: 4rem;
+            padding: 0px 0;
+            border-radius: 25px;
+
+            padding: -20px 0 20px;
+            /*            background: linear-gradient(45deg, #343C60, #313646);*/
+            /*
+            box-shadow: 8px 8px 30px #202539,
+            -8px -8px 30px #495488;
+*/
+
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1em;
+        }
+
+        img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            border: 10px solid #ffffff;
+            border-radius: 25px;
+        }
+
+        .center {
+            max-width: 1200px;
+            text-align: center;
+            align-items: center;
+            vertical-align: baseline;
+            background-color: #ffffff;
+            margin: auto;
+            border-radius: 25px;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #343C60, #313646);
+            box-shadow: 8px 8px 30px #202539,
+                -8px -8px 30px #495488;
+        }
+
+
+        @media only screen and (min-width: 300px) {
+            .Header {
+                max-width: 350px;
+            }
+
+            .center {
+                max-width: 350px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .Header {
+                max-width: 700px;
+            }
+
+            .center {
+                max-width: 700px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .Header {
+                max-width: 1000px;
+            }
+
+            .center {
+                max-width: 1000px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="Header">
+        <h2>
+            Haircut Camera
+        </h2>
+    </div>
+
+    <div class="center">
+        <img src="" id="photo">
+        <br>
+        <p>
+            <ion-icon name="information-circle-outline" style="font-size: 16px; padding-top:20px"></ion-icon>
+            The camera should face the back head.
+        </p>
+    </div>
+
+
+    <!-- Abandoned interface elements for controlling the light -->
+    <!--  <div class="hueContainer">
+          Hue<br>
+      <input type="range" align="center" min="1" max="360" value="0" id="hue" onchange="updateH(this)">
+      <p id="outputH"></p>
+    </div>
+    <br>
+    <div class="satContainer">
+          Saturation<br>
+      <input type="range" align="center" min="1" max="100" value="100" id="sat" onchange="updateS(this)">
+      <p id="outputS"></p>
+    </div>
+    <br>
+    <div class="ligContainer">
+          Lightness<br>
+      <input type="range" align="center" min="1" max="100" value="50" id="lig" onchange="updateL(this)">
+      <p id="outputL"></p>
+    </div>   -->
+
+    <script>
+        //  var sliderH = document.getElementById("hue").value;
+        //  var sliderS = document.getElementById("sat").value;
+        //  var sliderL = document.getElementById("lig").value;
+        //  var outputH = sliderH.innerHTML;
+        //  var outputS = sliderS.innerHTML;
+        //  var outputL = SLIDERb.innerHTML;
+        //  
+        //  updateH =>{var xhr = new XMLHttpRequest(); xhr.open("GET", "/action?slider="+outputH, true); xhr.send()}
+        //  updateS =>{var xhr = new XMLHttpRequest(); xhr.open("GET", "/action?slider="+outputS, true); xhr.send()}
+        //  updateL =>{var xhr = new XMLHttpRequest(); xhr.open("GET", "/action?slider="+outputL, true); xhr.send()}
+
+
+        //streaming via the http link
+        window.onload = document.getElementById("photo").src = window.location.href.slice(0, -1) + ":81/stream";
+
+    </script>
+</body>
+
+</html>
